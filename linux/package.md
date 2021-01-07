@@ -4,6 +4,11 @@
 apt install rpm
 apt install checkinstall
 ```
+- make rpmbuild directory
+```
+sudo mkdir -p /root/rpmbuild/SOURCES
+
+```
 - get source file nanomq
 ```
 git clone https://github.com/nanomq/nanomq.git
@@ -24,6 +29,7 @@ sudo checkinstall --backup=no --install=no --type=debian --arch=amd64  --pkgname
 
 - some troubles you may encounter
 1. error: line 11: Empty tag: Recommends
+
 this is a known bug checkinstall, when you build rpm on ubuntu,you must be sure every option is filled with sth when you use checkinstall with interactive mode.[see this](http://checkinstall.izto.org/checkinstall.git/), clone this project to see BUGS 
 ```
 to make sure every blank is not empty
