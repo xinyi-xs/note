@@ -4,3 +4,7 @@ git branch -r | grep -v '\->' | while read remote; do git branch --track "${remo
 git fetch --all
 git pull --all
 ```
+
+git 添加远程分支
+```
+git ls-remote <remote>
